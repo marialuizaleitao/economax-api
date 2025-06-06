@@ -18,3 +18,8 @@ const startServer = async () => {
     process.exit(1);
   }
 };
+
+startServer().catch((error) => {
+  console.error('Error during server startup:', error);
+  process.exit(1);
+});
