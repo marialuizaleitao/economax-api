@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# TypeScript build artifacts
+dist/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+
+# Compiled files
+*.out
+*.exe
+
+# NPM debug files
+npm-debug.log*
+
+# Coverage reports
+coverage/
+
+# Temporary files
+tmp/
