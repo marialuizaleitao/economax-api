@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getConnection } from '../database/connection';
-import { limitSchema, validateCurrentOrFutureMonth } from '../utils/validators';
-import { Limit } from '../types';
+import { limitSchema, validateCurrentOrFutureMonth } from '../../utils/validators';
+import { Limit } from '../../types';
 
 export const createLimit = async (req: Request, res: Response): Promise<void> => {
   try {

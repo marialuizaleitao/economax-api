@@ -2,13 +2,13 @@ import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { getConnection } from '../database/connection';
-import { userSignupSchema, userSigninSchema } from '../utils/validators';
-import { User } from '../types';
+import { userSignupSchema, userSigninSchema } from '../../utils/validators';
+import { User } from '../../types';
 
 export const signup = async (req: Request, res: Response): Promise<void> => {
   try {
     const { error, value } = userSignupSchema.validate(req.body);
-    
+
     if (error) {
       res.status(400).json({ error: error.details[0].message });
       return;
@@ -65,7 +65,7 @@ export const signup = async (req: Request, res: Response): Promise<void> => {
 export const signin = async (req: Request, res: Response): Promise<void> => {
   try {
     const { error, value } = userSigninSchema.validate(req.body);
-    
+
     if (error) {
       res.status(400).json({ error: error.details[0].message });
       return;
