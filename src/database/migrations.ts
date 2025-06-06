@@ -41,7 +41,6 @@ const createLimitsTable = `
 
 export const runMigrations = async (): Promise<void> => {
   try {
-    await connectDB();
     const connection = getConnection();
 
     await connection.execute(createUsersTable);
