@@ -2,8 +2,8 @@ import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { getConnection } from '../database/connection';
-import { userSignupSchema, userSigninSchema } from '../../utils/validators';
-import { User } from '../../types';
+import { userSignupSchema, userSigninSchema } from '../utils/validators';
+import { User } from '../types';
 
 export const signup = async (req: Request, res: Response): Promise<void> => {
   try {

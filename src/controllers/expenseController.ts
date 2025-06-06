@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getConnection } from '../database/connection';
-import { expenseSchema, validateCurrentOrFutureMonth } from '../../utils/validators';
-import { Expense } from '../../types';
+import { expenseSchema, validateCurrentOrFutureMonth } from '../utils/validators';
+import { Expense } from '../types';
 
 export const createExpense = async (req: Request, res: Response): Promise<void> => {
   try {
